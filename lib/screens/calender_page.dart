@@ -35,7 +35,8 @@ class _CalendarPageState extends State<CalendarPage> {
               backgroundColor: kCalendarColor,
               title: 'Calender View',
               icon: Image.asset('assets/icons/calendar4.png', height: 30),
-              iconColor: const Color.fromARGB(255, 78, 101, 177),
+              // iconColor: const Color.fromARGB(255, 78, 101, 177),
+              iconColor: Colors.white10,
               iconPadding: 10,
             ),
 
