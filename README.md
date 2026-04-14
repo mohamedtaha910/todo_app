@@ -41,25 +41,25 @@ Key goals of the app:
 
 ## 📸 Screenshots
 
-| Home Screen                                     | Calendar View                                |
+| Splash Screen                                   | Sign UP                                      |
 | ----------------------------------------------- | -------------------------------------------- |
-| ![Home](assets/screenshots/home.png)            | ![Calendar](assets/screenshots/calender.png) |
+| ![Splash](assets/screenshots/splash.png)        | ![Sign Up](assets/screenshots/sign_up.png)   |
 
-| Statistics                                      | Add Task                                     |
+| Log In                                          | Home Screen                                  |
 | ----------------------------------------------- | -------------------------------------------- |
-| ![Stats](assets/screenshots/statistics.png)     | ![Add](assets/screenshots/add_task.png)      |
+| ![Log In ](assets/screenshots/log_in.png)       | ![Home](assets/screenshots/home.png)         |
 
-| Edit Task                                       | Splash Screen                                |
+| Edit Task                                       | Add Task Screen                              |
 | ----------------------------------------------- | -------------------------------------------- |
-| ![Edit](assets/screenshots/edit_task.png)       | ![Splash](assets/screenshots/splash.png)     |
+| ![Edit](assets/screenshots/edit_task.png)       | ![Add](assets/screenshots/add_task.png)      |
 
 | Other                                           | Health                                       |
 | ----------------------------------------------- | -------------------------------------------- |
 | ![Other](assets/screenshots/other_category.png) | ![Health](assets/screenshots/health.png)     |
 
-| Sign Up                                         | Log In                                       |
+| Statistics                                      | Calender View                                |
 | ----------------------------------------------- | -------------------------------------------- |
-| ![Sign Up](assets/screenshots/sign_up.png)      | ![Log In ](assets/screenshots/log_in.png)    |
+| ![Statistics](assets/screenshots/statistics.png)| ![Calender](assets/screenshots/calender.png) |
 
 ---
 

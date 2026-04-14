@@ -141,47 +141,47 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                                   color: Colors.red,
                                 );
                               } else {
-                                // ================== windows =====================================
-                                await Future.delayed(
-                                  Duration(seconds: 2),
-                                  () {},
-                                );
-
-                                isLoading = false;
-                                setState(() {});
-                                showMessage(
-                                  context,
-                                  message: 'Password change successfully',
-                                  icon: Icons.check,
-                                  color: Colors.green,
-                                );
-                                // =================== emulator =====================================
-
-                                // print('Password changed successfullyy');
-
-                                // bool result = await updatePassword(
-                                //   email: email,
-                                //   oldPassword: oldPassword,
-                                //   newPassword: newPassword,
+                                // // ================== windows =====================================
+                                // await Future.delayed(
+                                //   Duration(seconds: 2),
+                                //   () {},
                                 // );
+
                                 // isLoading = false;
                                 // setState(() {});
+                                // showMessage(
+                                //   context,
+                                //   message: 'Password change successfully',
+                                //   icon: Icons.check,
+                                //   color: Colors.green,
+                                // );
+                                // =================== emulator =====================================
 
-                                // if (result) {
-                                //   showMessage(
-                                //     context,
-                                //     message: 'Password changed successfully',
-                                //     icon: Icons.check,
-                                //     color: Colors.green,
-                                //   );
-                                // }else{
-                                //   showMessage(
-                                //     context,
-                                //     message: 'Something went wrong',
-                                //     icon: Icons.error,
-                                //     color: Colors.red,
-                                //   );
-                                // }
+                                print('Password changed successfullyy');
+
+                                bool result = await updatePassword(
+                                  email: email,
+                                  oldPassword: oldPassword,
+                                  newPassword: newPassword,
+                                );
+                                isLoading = false;
+                                setState(() {});
+
+                                if (result) {
+                                  showMessage(
+                                    context,
+                                    message: 'Password changed successfully',
+                                    icon: Icons.check,
+                                    color: Colors.green,
+                                  );
+                                }else{
+                                  showMessage(
+                                    context,
+                                    message: 'Something went wrong',
+                                    icon: Icons.error,
+                                    color: Colors.red,
+                                  );
+                                }
                                 // =====================================================================
                               }
                             } else {
