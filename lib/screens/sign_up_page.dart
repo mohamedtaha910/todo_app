@@ -31,7 +31,7 @@ class _SignUpPageState extends State<SignUpPage> {
         backgroundColor: kBackgroundColor,
 
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Form(
             key: formKey,
             child: SingleChildScrollView(
@@ -41,25 +41,37 @@ class _SignUpPageState extends State<SignUpPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  IconButton(
-                    icon: Icon(
-                      Icons.arrow_back_ios_new_outlined,
-                      color: Colors.black45,
+                  SizedBox(height: 46),
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context),
+                    child: Container(
+                      padding: EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withAlpha(25),
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.black.withAlpha(25),
+                          width: 0.5,
+                        ),
+                      ),
+                      child: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Colors.black45,
+                        size: 19,
+                      ),
                     ),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
                   ),
+                  SizedBox(height: 16),
                   Center(
                     child: SvgPicture.asset(
                       'assets/icons/time.svg',
-                      height: 310,
+                      height: 250,
                     ),
                   ),
                   SizedBox(height: 32),
-                  // SvgPicture.asset('assets/picture/Sign_Up_word.svg'),
-                  // Text('Sign Up', style: TextStyle(fontSize: 24 , color: kSecondaryColor , fontWeight: FontWeight.bold) , ),
 
+                  SvgPicture.asset('assets/picture/Sign_Up_word.svg'),
+                  // Text('Sign Up', style: TextStyle(fontSize: 24 , color: kSecondaryColor , fontWeight: FontWeight.bold) , ),
                   SizedBox(height: 32),
                   StartTextFeild(
                     hintText: 'Email',
@@ -76,8 +88,9 @@ class _SignUpPageState extends State<SignUpPage> {
 
                   CustomButton(
                     text: 'Sign Up',
-                    marginHorizontal: 42,
-                    borderRadius: 25,
+                    marginHorizontal: 0,
+                    borderRadius: 50,
+                    verticalPadding: 10,
                     onTap: () async {
                       if (formKey.currentState!.validate()) {
                         isLoading = true;
@@ -115,28 +128,29 @@ class _SignUpPageState extends State<SignUpPage> {
                       } else {}
                     },
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 20),
                   Center(
                     child: Text(
                       'Or continue with',
                       style: TextStyle(
+                        fontSize: 12.5,
                         color: Colors.black54,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 18),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
 
                     children: [
-                      SvgPicture.asset('assets/icons/facebook.svg'),
+                      SvgPicture.asset('assets/icons/facebook.svg', height: 45),
                       SizedBox(width: 16),
-                      SvgPicture.asset('assets/icons/google.svg'),
+                      SvgPicture.asset('assets/icons/google.svg', height: 45),
                       SizedBox(width: 16),
-                      SvgPicture.asset('assets/icons/apple.svg'),
+                      SvgPicture.asset('assets/icons/apple.svg', height: 45),
                     ],
                   ),
                   SizedBox(height: 20),
@@ -147,7 +161,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         'Already have an account? ',
                         style: TextStyle(
                           color: Colors.black45,
-                          fontSize: 14,
+                          fontSize: 13,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -163,6 +177,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: Text(
                           ' Log In',
                           style: TextStyle(
+                            fontSize: 13,
                             color: kPrimaryColor,
                             fontWeight: FontWeight.bold,
                           ),
@@ -170,7 +185,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 24),
+                  // SizedBox(height: 24),
                 ],
               ),
             ),
@@ -203,9 +218,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 Navigator.of(context).pop();
               },
               text: 'Ok',
-              marginHorizontal: 48,
+              marginHorizontal: 50,
               verticalPadding: 8,
               borderRadius: 25,
+              color: Colors.red.withAlpha(50),
+              textColor: Colors.red,
             ),
           ],
         ),

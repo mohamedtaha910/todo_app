@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             MainHeader(date: date),
             Transform.translate(
-              offset: Offset(0, -60),
+              offset: Offset(0, -85),
               child: Container(
                 decoration: BoxDecoration(),
                 child: Column(
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             'Today',
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 19,
                               fontWeight: FontWeight.bold,
                               // color: Colors.black54,
                             ),

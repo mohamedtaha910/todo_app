@@ -10,6 +10,8 @@ class CustomButton extends StatelessWidget {
     this.verticalPadding = 12,
     this.borderRadius = 12,
     this.color = kSecondaryColor,
+    this.textSize = 16,
+    this.textColor = Colors.white,
   });
   final String text;
   final double marginHorizontal;
@@ -17,6 +19,8 @@ class CustomButton extends StatelessWidget {
   final double borderRadius;
   final void Function()? onTap;
   final Color color;
+  final double textSize;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +41,9 @@ class CustomButton extends StatelessWidget {
           child: Text(
             text,
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+              color: textColor,
+              fontSize: textSize,
+              // fontWeight: FontWeight.bold,
             ),
           ),
         ),

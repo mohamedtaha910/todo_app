@@ -14,7 +14,11 @@ class StartPage extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new_outlined, color: Colors.black45),
+          icon: Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.black45,
+            size: 20,
+          ),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -26,44 +30,58 @@ class StartPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Spacer(flex: 22),
-          SvgPicture.asset(
-            'assets/picture/splash_two.svg',
-          ),
+          SvgPicture.asset('assets/picture/splash_two.svg', height: 340),
           // SizedBox(height: 33),
-          Spacer(flex: 16),
-          SvgPicture.asset('assets/picture/Start Manage Your Task With Mtodo.svg'),
-          // SizedBox(height: 24),
-         
-          Spacer(flex: 16),
-          CustomButton(text: 'Sign Up' ,marginHorizontal: 42, borderRadius: 25,onTap: () {
+          Spacer(flex: 17),
+          SvgPicture.asset(
+            'assets/picture/Start Manage Your Task With Mtodo.svg',
+          ),
 
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUpPage()));
-          }, ),
+          // SizedBox(height: 24),
+          Spacer(flex: 14),
+          CustomButton(
+            text: 'Sign Up',
+            marginHorizontal: 16,
+            verticalPadding: 10,
+            textSize: 15,
+            borderRadius: 25,
+            onTap: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => SignUpPage()));
+            },
+          ),
           SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Already have an account? ' , style: TextStyle(
-                color: Colors.black45,
-                fontSize: 14,
-                fontWeight: FontWeight.w500
-              ),),
+              Text(
+                'Already have an account? ',
+                style: TextStyle(
+                  color: Colors.black45,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               SizedBox(width: 4),
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => LogInPage()));
+                  Navigator.of(
+                    context,
+                  ).push(MaterialPageRoute(builder: (context) => LogInPage()));
                 },
                 child: Text(
-                  'Log In',
+                  'Login',
                   style: TextStyle(
                     color: kPrimaryColor,
                     fontWeight: FontWeight.bold,
+                    fontSize: 13,
                   ),
                 ),
               ),
             ],
           ),
-            SizedBox(height: 32),
+          SizedBox(height: 28),
         ],
       ),
     );

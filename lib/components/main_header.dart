@@ -36,14 +36,14 @@ class _MainHeaderState extends State<MainHeader> {
               bottomRight: Radius.circular(20),
             ),
           ),
-          height: 200,
+          height: 250,
           width: double.infinity,
           // color: kSecondaryColor,
         ),
 
         /// Ellipse 1
         Positioned(
-          top: 55,
+          bottom: 0,
           left: 0,
           child: SvgPicture.asset('assets/picture/Ellipse 1.svg'),
         ),
@@ -57,7 +57,7 @@ class _MainHeaderState extends State<MainHeader> {
 
         /// Header Title
         Positioned(
-          top: 80,
+          top: 112,
           right: 0,
           left: 0,
 
@@ -69,7 +69,7 @@ class _MainHeaderState extends State<MainHeader> {
 
         /// Date
         Positioned(
-          top: 22,
+          top: 45,
           // right: MediaQuery.of(context).size.width / 2 - 55,
           right: 0,
           left: 0,
@@ -90,7 +90,7 @@ class _MainHeaderState extends State<MainHeader> {
 
         /// Profile
         Positioned(
-          top: 10,
+          top: 35,
           right: 16,
           child: GestureDetector(
             onTap: () {
@@ -115,7 +115,7 @@ class _MainHeaderState extends State<MainHeader> {
 
         /// Calendar
         Positioned(
-          top: 10,
+          top: 35,
           left: 16,
           child: GestureDetector(
             onTap: () {

@@ -50,7 +50,7 @@ class _TaskItemState extends State<TaskItem> {
         );
       },
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.only(top: 16, bottom: 16, left: 010, right: 16),
         margin: EdgeInsets.symmetric(vertical: 6),
         decoration: BoxDecoration(
           boxShadow: [
@@ -67,18 +67,18 @@ class _TaskItemState extends State<TaskItem> {
               width: 6,
             ),
 
-            // end: BorderSide(
-            //   color: widget.task.isCompleted ? Colors.grey : category!.color,
-            //   width: 0.1,
-            // ),
-            // top: BorderSide(
-            //   color: widget.task.isCompleted ? Colors.grey : category!.color,
-            //   width: 0.1,
-            // ),
-            // bottom: BorderSide(
-            //   color: widget.task.isCompleted ? Colors.grey : category!.color,
-            //   width: 0.1,
-            // ),
+            end: BorderSide(
+              color: widget.task.isCompleted ? Colors.grey : category!.color,
+              width: 0.1,
+            ),
+            top: BorderSide(
+              color: widget.task.isCompleted ? Colors.grey : category!.color,
+              width: 0.1,
+            ),
+            bottom: BorderSide(
+              color: widget.task.isCompleted ? Colors.grey : category!.color,
+              width: 0.1,
+            ),
           ),
           borderRadius: BorderRadius.circular(8),
           color: kBackgroundColor,
@@ -90,7 +90,7 @@ class _TaskItemState extends State<TaskItem> {
                 Text(
                   ' ${widget.task.title.length > 30 ? '${widget.task.title.substring(0, 30)}...' : widget.task.title}',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 15,
                     fontWeight: FontWeight.w500,
                     decoration: widget.task.isCompleted
                         ? TextDecoration.lineThrough
@@ -141,7 +141,13 @@ class _TaskItemState extends State<TaskItem> {
                     color: widget.task.isCompleted
                         ? Colors.grey.withAlpha(50)
                         : category!.color.withAlpha(50),
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(50),
+                    // border: Border.all(
+                    //   color: widget.task.isCompleted
+                    //       ? Colors.grey
+                    //       : category!.color,
+                    //   width: 0.4,
+                    // ),
                   ),
                   child: Text(
                     widget.task.category,
@@ -177,12 +183,15 @@ class _TaskItemState extends State<TaskItem> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        content: Text(
-          'Are you sure you want to delete this task?',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+        content: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            'Are you sure you want to delete this task?',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 15,
+              fontWeight: FontWeight.w500,
+            ),
           ),
         ),
         actions: [
@@ -198,8 +207,9 @@ class _TaskItemState extends State<TaskItem> {
           ),
           TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor: const Color.fromARGB(255, 213, 59, 47),
+              foregroundColor: Colors.red,
+              // backgroundColor: const Color.fromARGB(255, 213, 59, 47),
+              backgroundColor: Colors.red.withAlpha(50),
             ),
             onPressed: () {
               TaskServices().deleteTask(widget.task);

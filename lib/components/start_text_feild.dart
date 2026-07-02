@@ -6,28 +6,27 @@ class StartTextFeild extends StatefulWidget {
     super.key,
     required this.hintText,
     required this.icon,
-    required this.onChanged, 
+    required this.onChanged,
   });
   final String hintText;
   final IconData icon;
   final void Function(String)? onChanged;
-  
 
   @override
   State<StartTextFeild> createState() => _StartTextFeildState();
 }
 
 class _StartTextFeildState extends State<StartTextFeild> {
-  bool obscureText= true;
+  bool obscureText = true;
   @override
   Widget build(BuildContext context) {
-    
-    double borderRadius = 25;
+    double borderRadius = 50;
+
     return TextFormField(
       validator: (data) {
         if (data!.isEmpty) {
           return 'feild is required';
-        }else{
+        } else {
           return null;
         }
       },
@@ -37,7 +36,8 @@ class _StartTextFeildState extends State<StartTextFeild> {
 
       cursorColor: kSecondaryColor,
       decoration: InputDecoration(
-        suffix:  GestureDetector(
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        suffix: GestureDetector(
           onTap: () {
             setState(() {
               obscureText = !obscureText;

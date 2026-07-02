@@ -9,7 +9,7 @@ class CategoryItem extends StatelessWidget {
     required this.iconPath,
     required this.taskCount,
     required this.name,
-    required this.onTap
+    required this.onTap,
   });
 
   final Color color;
@@ -19,13 +19,12 @@ class CategoryItem extends StatelessWidget {
   final String name;
   final void Function()? onTap;
 
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal:  16 ,),
+        padding: EdgeInsets.symmetric(horizontal: 16),
         // height: 100,
         // width: 200,
         decoration: BoxDecoration(
@@ -46,18 +45,18 @@ class CategoryItem extends StatelessWidget {
           children: [
             SvgPicture.asset(
               iconPath,
-              height: name == 'Work' ? 28 : 24,
-              width: name == 'Work' ? 28 : 24,
+              height: name == 'Work' ? 26 : 22,
+              width: name == 'Work' ? 26 : 22,
               color: iconColor,
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 10),
             Row(
               children: [
                 Text(
                   '$taskCount ',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 17,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -65,7 +64,7 @@ class CategoryItem extends StatelessWidget {
                   name,
                   style: TextStyle(
                     color: Colors.black54,
-                    fontSize: 16,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

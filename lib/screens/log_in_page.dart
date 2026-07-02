@@ -30,22 +30,9 @@ class _LogInPageState extends State<LogInPage> {
       inAsyncCall: isLoading,
       child: Scaffold(
         backgroundColor: kBackgroundColor,
-        appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios_new_outlined,
-              color: Colors.black54,
-            ),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          surfaceTintColor: Colors.transparent,
-        ),
+
         body: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Form(
             key: formKey,
             child: SingleChildScrollView(
@@ -53,25 +40,46 @@ class _LogInPageState extends State<LogInPage> {
               physics: BouncingScrollPhysics(),
 
               child: Column(
-                // crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset(
-                    'assets/icons/time2.svg',
-                    height: 280,
+                  SizedBox(height: 46),
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context),
+                    child: Container(
+                      padding: EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withAlpha(25),
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.black.withAlpha(25),
+                          width: 0.5,
+                        ),
+                      ),
+                      child: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Colors.black45,
+                        size: 19,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Center(
+                    child: SvgPicture.asset(
+                      'assets/icons/time2.svg',
+                      height: 239,
+                    ),
                   ),
 
                   SizedBox(height: 32),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   children: [
-                  //     SvgPicture.asset(
-                  //       'assets/picture/Hello again! welcome back.svg',
-                  //       height: 55,
-                  //       width: 300,
-                  //     ),
-                  //   ],
-                  // ),
+                  Text(
+                    'Log In',
+                    style: TextStyle(
+                      color: kSecondaryColor,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   SizedBox(height: 32),
                   StartTextFeild(
                     hintText: 'Email',
@@ -92,8 +100,9 @@ class _LogInPageState extends State<LogInPage> {
                   SizedBox(height: 42),
                   CustomButton(
                     text: 'Log In',
-                    marginHorizontal: 42,
-                    borderRadius: 25,
+                    marginHorizontal: 0,
+                    verticalPadding: 10,
+                    borderRadius: 50,
                     onTap: () async {
                       if (formKey.currentState!.validate()) {
                         isLoading = true;
@@ -114,16 +123,14 @@ class _LogInPageState extends State<LogInPage> {
                           } else if (e.code == 'user-not-found') {
                             showMessage(
                               context,
-                              message:
-                                  'No user for the given email.',
+                              message: 'No user for the given email.',
                             );
-                          }else if(e.code == 'wrong-password'){
+                          } else if (e.code == 'wrong-password') {
                             showMessage(
                               context,
                               message: 'Wrong password provided for that user.',
                             );
-                          }
-                           else if (e.code == 'unknown-error') {
+                          } else if (e.code == 'unknown-error') {
                             showMessage(
                               context,
                               message: 'The email or password is incorrect',
@@ -131,8 +138,7 @@ class _LogInPageState extends State<LogInPage> {
                           } else {
                             showMessage(
                               context,
-                              message:
-                                  '${e.code} There was an error ',
+                              message: '${e.code} There was an error ',
                             );
                           }
                         } catch (e) {
@@ -149,11 +155,14 @@ class _LogInPageState extends State<LogInPage> {
                     },
                   ),
                   SizedBox(height: 16),
-                  Text(
-                    'Or continue with',
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w500,
+                  Center(
+                    child: Text(
+                      'Or continue with',
+                      style: TextStyle(
+                        color: Colors.black54,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12.5,
+                      ),
                     ),
                   ),
                   SizedBox(height: 16),
@@ -163,11 +172,11 @@ class _LogInPageState extends State<LogInPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
 
                     children: [
-                      SvgPicture.asset('assets/icons/facebook.svg'),
+                      SvgPicture.asset('assets/icons/facebook.svg', height: 45),
                       SizedBox(width: 16),
-                      SvgPicture.asset('assets/icons/google.svg'),
+                      SvgPicture.asset('assets/icons/google.svg', height: 45),
                       SizedBox(width: 16),
-                      SvgPicture.asset('assets/icons/apple.svg'),
+                      SvgPicture.asset('assets/icons/apple.svg', height: 45),
                     ],
                   ),
                   SizedBox(height: 24),
@@ -178,7 +187,7 @@ class _LogInPageState extends State<LogInPage> {
                         'Don\'t have an account? ',
                         style: TextStyle(
                           color: Colors.black45,
-                          fontSize: 14,
+                          fontSize: 13,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -196,13 +205,14 @@ class _LogInPageState extends State<LogInPage> {
                           style: TextStyle(
                             color: kPrimaryColor,
                             fontWeight: FontWeight.bold,
+                            fontSize: 13,
                           ),
                         ),
                       ),
                     ],
                   ),
 
-                  SizedBox(height: 16),
+                  // SizedBox(height: 16),
                 ],
               ),
             ),
@@ -224,27 +234,30 @@ class _LogInPageState extends State<LogInPage> {
               decoration: BoxDecoration(
                 color: Colors.red.withAlpha(50),
                 shape: BoxShape.circle,
-
               ),
-              child: Icon(Icons.error, color: Colors.red, size: 40)),
+              child: Icon(Icons.error, color: Colors.red, size: 40),
+            ),
             SizedBox(height: 24),
             Text(
               message,
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 16,
+                fontSize: 15,
                 fontWeight: FontWeight.w500,
               ),
+              textAlign: TextAlign.center,
             ),
-            SizedBox(height: 32),
+            SizedBox(height: 26),
             CustomButton(
               onTap: () {
                 Navigator.of(context).pop();
               },
               text: 'Ok',
-              marginHorizontal: 48,
+              marginHorizontal: 50,
               verticalPadding: 8,
               borderRadius: 25,
+              color: Colors.red.withAlpha(50),
+              textColor: Colors.red,
             ),
           ],
         ),

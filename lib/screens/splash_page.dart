@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage>
   void initState() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 6),
+      duration: const Duration(seconds: 5),
     );
 
     slidingAnimation =
@@ -37,7 +37,7 @@ class _SplashPageState extends State<SplashPage>
 
     animationController.forward();
 
-    Future.delayed(Duration(seconds: 7)).then(
+    Future.delayed(Duration(seconds: 6)).then(
       (value) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => GetStarted()),
@@ -62,12 +62,12 @@ class _SplashPageState extends State<SplashPage>
         children: [
           SvgPicture.asset(
             'assets/icons/Logo.svg',
-            height: 160,
+            height: 140,
 
             color: const Color.fromARGB(255, 52, 49, 233).withAlpha(230),
           ),
 
-          SizedBox(height: 32),
+          SizedBox(height: 36),
           AnimatedBuilder(
             animation: animationController,
             builder: (context, _) => FadeTransition(
@@ -76,7 +76,7 @@ class _SplashPageState extends State<SplashPage>
                 position: slidingAnimation,
                 child: SvgPicture.asset(
                   'assets/icons/TODOLIST.svg',
-                  height: 28,
+                  height: 26,
                 ),
               ),
             ),

@@ -14,25 +14,35 @@ class GetStarted extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Spacer(flex: 18),
+          // Spacer(flex: 18),
+          SizedBox(height: 130),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(16),
             child: SvgPicture.asset(
               'assets/picture/splash_one.svg',
-              height: 440,
-              width: 380,
+              height: 400,
+              // width: 340,
               fit: BoxFit.fill,
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 40),
           SvgPicture.asset('assets/picture/Manage your tasks.svg'),
           SizedBox(height: 16),
           SvgPicture.asset('assets/picture/bromo.svg'),
-          Spacer(flex: 10),
-          CustomButton(text: 'Get Started' ,marginHorizontal: 42, borderRadius: 25,onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => StartPage()));
-          }, ),
-          SizedBox(height: 42),
+          Spacer(),
+          CustomButton(
+            text: 'Get Started',
+            marginHorizontal: 16,
+            verticalPadding: 10,
+            borderRadius: 25,
+            textSize: 16,
+            onTap: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => StartPage()));
+            },
+          ),
+          SizedBox(height: 28),
         ],
       ),
     );
