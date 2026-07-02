@@ -33,7 +33,7 @@ class CategoriesHeader extends StatelessWidget {
               bottomRight: Radius.circular(20),
             ),
           ),
-          height: 200,
+          height: 220,
           width: double.infinity,
           // color: kSecondaryColor,
         ),
@@ -60,7 +60,7 @@ class CategoriesHeader extends StatelessWidget {
 
         /// Header Title
         Positioned(
-          top: 70,
+          top: 80,
           right: 0,
           left: 0,
           child: Row(
@@ -96,7 +96,7 @@ class CategoriesHeader extends StatelessWidget {
 
         /// Date
         Positioned(
-          top: 22,
+          top: 40,
           // right: MediaQuery.of(context).size.width / 2 - 55,
           right: 0,
           left: 0,
@@ -126,11 +126,15 @@ class CategoriesHeader extends StatelessWidget {
                 // padding: EdgeInsets.only(left: 6, right: 8 , top: 8, bottom: 8),
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.white10,
+                  color: Colors.black.withAlpha(50),
                   shape: BoxShape.circle,
                   // borderRadius: BorderRadius.circular(12),
                 ),
-                child: Icon(Icons.arrow_back_ios, color: Colors.black54 , size: 18,),
+                child: Icon(
+                  Icons.arrow_back_ios_new_rounded,
+                  color: Colors.white,
+                  size: 18,
+                ),
               ),
             ),
           ),

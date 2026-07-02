@@ -69,7 +69,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
             /// ================== CARD ==================
             Transform.translate(
-              offset: Offset(0, -75),
+              offset: Offset(0, -79),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 16),
                 padding: EdgeInsets.all(16),

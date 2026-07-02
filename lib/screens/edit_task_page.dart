@@ -56,12 +56,12 @@ class _EditTaskPageState extends State<EditTaskPage> {
               icon: Image.asset('assets/icons/edit3.png', height: 30),
               iconColor: Colors.white10,
               iconPadding: 10,
-              // headerHeight: ,
+              headerHeight: 36,
             ),
 
             /// ================== CARD ==================
             Transform.translate(
-              offset: Offset(0, -60),
+              offset: Offset(0, -75),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 16),
                 padding: EdgeInsets.all(16),
@@ -105,7 +105,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
                       Text(
                         'Category',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -160,6 +160,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
                                   style: TextStyle(
                                     color: categories[index].color,
                                     fontWeight: FontWeight.w500,
+                                    fontSize: 13,
                                   ),
                                 ),
                               ),
@@ -174,7 +175,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
                           Text(
                             'Date',
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -197,7 +198,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
                           Text(
                             'Time',
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -243,7 +244,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
                       Text(
                         'Note',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -260,6 +261,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
                       SizedBox(height: 24),
                       CustomButton(
                         borderRadius: 25,
+                        verticalPadding: 10,
                         text: 'Save',
                         onTap: () {
                           widget.task.date = selectedDate!;
