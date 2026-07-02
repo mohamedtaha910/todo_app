@@ -45,11 +45,12 @@ class _EditTextFeildState extends State<EditTextFeild> {
           return null;
         }
       },
-      autofocus: widget.autoFocus ,
+      autofocus: widget.autoFocus,
       onChanged: widget.onchanged,
       cursorColor: kSecondaryColor,
       maxLines: widget.maxLines,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         fillColor: Colors.grey.withOpacity(0.1),
         filled: true,
 

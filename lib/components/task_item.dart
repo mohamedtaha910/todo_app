@@ -51,7 +51,7 @@ class _TaskItemState extends State<TaskItem> {
       },
       child: Container(
         padding: EdgeInsets.only(top: 16, bottom: 16, left: 010, right: 16),
-        margin: EdgeInsets.symmetric(vertical: 6),
+        margin: EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(

@@ -24,16 +24,17 @@ class CustomTextFeild extends StatelessWidget {
           return null;
         }
       },
-      autofocus: autoFocus ,
+      autofocus: autoFocus,
       onChanged: onchanged,
       cursorColor: kSecondaryColor,
       maxLines: maxLines,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         fillColor: Colors.grey.withOpacity(0.1),
         filled: true,
 
         hintText: hintText,
-        hintStyle: TextStyle(color: Colors.grey),
+        hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
         border: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),
           borderRadius: BorderRadius.circular(12),

@@ -41,8 +41,8 @@ class CustomHeader extends StatelessWidget {
             ],
             color: backgroundColor,
             borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(30),
-              bottomRight: Radius.circular(30),
+              bottomLeft: Radius.circular(28),
+              bottomRight: Radius.circular(28),
             ),
           ),
         ),
@@ -66,6 +66,7 @@ class CustomHeader extends StatelessWidget {
           top: headerHeight,
           left: 0,
           right: 0,
+
           child: SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +85,7 @@ class CustomHeader extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 22,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -102,7 +103,8 @@ class CustomHeader extends StatelessWidget {
             child: GestureDetector(
               onTap: () => Navigator.pop(context),
               child: Container(
-                padding: EdgeInsets.only(left: 6, top: 8, right: 8, bottom: 8),
+                // padding: EdgeInsets.only(left: 5, top: 7, right: 7, bottom: 7),
+                padding: EdgeInsets.all(2),
                 decoration: BoxDecoration(
                   // color: kBackgroundColor.withAlpha(255),
                   color: Colors.white.withAlpha(240),
@@ -111,9 +113,9 @@ class CustomHeader extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
-                  Icons.arrow_back_ios_rounded,
-                  color: const Color.fromARGB(255, 75, 202, 241),
-                  size: 16,
+                  Icons.chevron_left_rounded,
+                  color: Colors.black54,
+                  size: 28,
                 ),
               ),
             ),

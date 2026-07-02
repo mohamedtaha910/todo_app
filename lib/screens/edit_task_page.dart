@@ -50,12 +50,13 @@ class _EditTaskPageState extends State<EditTaskPage> {
           children: [
             /// ================== HEADER ==================
             CustomHeader(
-              height: 180,
+              height: 210,
               backgroundColor: kSecondaryColor,
               title: 'Edit Task',
-              icon: Image.asset('assets/icons/edit3.png', height: 32),
+              icon: Image.asset('assets/icons/edit3.png', height: 30),
               iconColor: Colors.white10,
               iconPadding: 10,
+              // headerHeight: ,
             ),
 
             /// ================== CARD ==================
@@ -84,7 +85,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
                       Text(
                         'Task Title',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -113,6 +114,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
 
                       // SizedBox(height: 120, child: CategoriesList()),
                       GridView.builder(
+                        padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -336,7 +338,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
 
   Widget buildTimeContainer(String text) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 18, vertical: 6),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
         color: Colors.grey.withAlpha(25),
@@ -344,7 +346,11 @@ class _EditTaskPageState extends State<EditTaskPage> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w500),
+        style: TextStyle(
+          color: Colors.black54,
+          fontWeight: FontWeight.w500,
+          fontSize: 13,
+        ),
       ),
     );
   }
@@ -365,7 +371,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
 
   Widget buildDateContainer(String text) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 32, vertical: 6),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
         color: Colors.grey.withAlpha(25),
@@ -373,7 +379,11 @@ class _EditTaskPageState extends State<EditTaskPage> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w500),
+        style: TextStyle(
+          color: Colors.black54,
+          fontWeight: FontWeight.w500,
+          fontSize: 13,
+        ),
       ),
     );
   }

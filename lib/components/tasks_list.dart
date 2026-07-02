@@ -10,7 +10,7 @@ class TasksList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      padding: EdgeInsets.symmetric(horizontal: 8 , vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       decoration: BoxDecoration(
         color: Colors.white70,
         borderRadius: BorderRadius.circular(12),
@@ -19,10 +19,11 @@ class TasksList extends StatelessWidget {
             color: Colors.black.withOpacity(0.1),
             blurRadius: 8,
             offset: Offset(0, 4),
-          )
-        ]
+          ),
+        ],
       ),
       child: ListView.builder(
+        padding: EdgeInsets.all(0),
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         itemCount: tasksList.length,

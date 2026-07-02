@@ -58,17 +58,18 @@ class _AddTaskPageState extends State<AddTaskPage> {
           children: [
             /// ================== HEADER ==================
             CustomHeader(
-              height: 180,
+              height: 210,
               backgroundColor: kSecondaryColor,
               title: 'Add New Task',
-              icon: Image.asset('assets/icons/add7.png', height: 33),
+              icon: Image.asset('assets/icons/add7.png', height: 31),
               iconColor: Colors.white10,
               iconPadding: 9,
+              headerHeight: 30,
             ),
 
             /// ================== CARD ==================
             Transform.translate(
-              offset: Offset(0, -65),
+              offset: Offset(0, -75),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 16),
                 padding: EdgeInsets.all(16),
@@ -92,7 +93,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                       Text(
                         'Task Title',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -113,7 +114,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                       Text(
                         'Category',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -122,6 +123,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
                       // SizedBox(height: 120, child: CategoriesList()),
                       GridView.builder(
+                        padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -167,6 +169,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                                   style: TextStyle(
                                     color: categories[index].color,
                                     fontWeight: FontWeight.w500,
+                                    fontSize: 13,
                                   ),
                                 ),
                               ),
@@ -181,12 +184,12 @@ class _AddTaskPageState extends State<AddTaskPage> {
                           Text(
                             'Date',
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
 
-                          SizedBox(width: 12),
+                          SizedBox(width: 14),
                           GestureDetector(
                             onTap: pickDate,
                             child: buildDateContainer(
@@ -208,11 +211,11 @@ class _AddTaskPageState extends State<AddTaskPage> {
                           Text(
                             'Time',
                             style: TextStyle(
-                              fontSize: 16,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 12),
+                          SizedBox(height: 14),
 
                           Spacer(),
                           GestureDetector(
@@ -254,7 +257,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                       Text(
                         'Note',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -271,6 +274,8 @@ class _AddTaskPageState extends State<AddTaskPage> {
                       SizedBox(height: 24),
                       CustomButton(
                         borderRadius: 25,
+                        verticalPadding: 10,
+                        textSize: 15,
 
                         text: 'Add Task',
                         onTap: () {
@@ -361,7 +366,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
   Widget buildTimeContainer(String text) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
         color: Colors.grey.withAlpha(25),
@@ -369,7 +374,11 @@ class _AddTaskPageState extends State<AddTaskPage> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w500),
+        style: TextStyle(
+          color: Colors.black54,
+          fontWeight: FontWeight.w500,
+          fontSize: 13,
+        ),
       ),
     );
   }
@@ -390,7 +399,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
   Widget buildDateContainer(String text) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 32, vertical: 6),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey),
         color: Colors.grey.withAlpha(25),
@@ -398,7 +407,11 @@ class _AddTaskPageState extends State<AddTaskPage> {
       ),
       child: Text(
         text,
-        style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w500),
+        style: TextStyle(
+          color: Colors.black54,
+          fontWeight: FontWeight.w500,
+          fontSize: 13,
+        ),
       ),
     );
   }
