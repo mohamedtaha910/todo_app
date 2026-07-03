@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             MainHeader(date: date),
             Transform.translate(
-              offset: Offset(0, -85),
+              offset: Offset(0, -92),
               child: Container(
                 decoration: BoxDecoration(),
                 child: Column(

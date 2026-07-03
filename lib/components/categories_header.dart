@@ -106,7 +106,7 @@ class CategoriesHeader extends StatelessWidget {
               Text(
                 formattedDate,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.black45,
                 ),
@@ -118,22 +118,23 @@ class CategoriesHeader extends StatelessWidget {
         /// Back Button
         Positioned(
           top: 10,
-          left: 15,
+          left: 16,
           child: SafeArea(
             child: GestureDetector(
               onTap: () => Navigator.pop(context),
               child: Container(
                 // padding: EdgeInsets.only(left: 6, right: 8 , top: 8, bottom: 8),
-                padding: EdgeInsets.all(8),
+                padding: EdgeInsets.all(2),
                 decoration: BoxDecoration(
-                  color: Colors.black.withAlpha(50),
+                  color: Colors.black.withAlpha(70),
                   shape: BoxShape.circle,
                   // borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.black12, width: 0.4),
                 ),
                 child: Icon(
-                  Icons.arrow_back_ios_new_rounded,
+                  Icons.chevron_left_rounded,
                   color: Colors.white,
-                  size: 18,
+                  size: 28,
                 ),
               ),
             ),

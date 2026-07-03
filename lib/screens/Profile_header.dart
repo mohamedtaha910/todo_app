@@ -13,7 +13,7 @@ class ProfileHeader extends StatelessWidget {
       children: [
         /// الخلفية
         Container(
-          height: 235,
+          height: 260,
           width: double.infinity,
           decoration: BoxDecoration(
             color: kSecondaryColor,
@@ -26,7 +26,7 @@ class ProfileHeader extends StatelessWidget {
 
         /// Ellipse 1
         Positioned(
-          top: 55,
+          top: 75,
           left: 0,
           child: SvgPicture.asset('assets/picture/Ellipse 1.svg'),
         ),
@@ -120,11 +120,10 @@ class ProfileHeader extends StatelessWidget {
           ),
         ),
 
-
         Positioned(
           top: 70,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal:  12),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

@@ -57,7 +57,7 @@ class _MainHeaderState extends State<MainHeader> {
 
         /// Header Title
         Positioned(
-          top: 112,
+          top: 118,
           right: 0,
           left: 0,
 
@@ -90,7 +90,7 @@ class _MainHeaderState extends State<MainHeader> {
 
         /// Profile
         Positioned(
-          top: 35,
+          top: 38,
           right: 16,
           child: GestureDetector(
             onTap: () {
@@ -115,7 +115,7 @@ class _MainHeaderState extends State<MainHeader> {
 
         /// Calendar
         Positioned(
-          top: 35,
+          top: 38,
           left: 16,
           child: GestureDetector(
             onTap: () {

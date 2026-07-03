@@ -39,7 +39,7 @@ class CategoriesPage extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.white70,
+                  color: Colors.white.withAlpha(200),
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
@@ -85,6 +85,7 @@ class CategoriesPage extends StatelessWidget {
                       return categoryTasks.isEmpty
                           ? NoNotesPage(text: 'No Tasks yet !')
                           : ListView.builder(
+                              padding: EdgeInsets.zero,
                               shrinkWrap: true,
                               physics: NeverScrollableScrollPhysics(),
                               itemCount: categoryTasks.length,

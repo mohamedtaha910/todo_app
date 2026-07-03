@@ -31,7 +31,7 @@ class _CalendarPageState extends State<CalendarPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomHeader(
-              height: 180,
+              height: 210,
               backgroundColor: kCalendarColor,
               title: 'Calender View',
               icon: Image.asset('assets/icons/calendar4.png', height: 30),
