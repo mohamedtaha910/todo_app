@@ -13,7 +13,7 @@ class ProfileHeader extends StatelessWidget {
       children: [
         /// الخلفية
         Container(
-          height: 260,
+          height: 280,
           width: double.infinity,
           decoration: BoxDecoration(
             color: kSecondaryColor,
@@ -26,7 +26,7 @@ class ProfileHeader extends StatelessWidget {
 
         /// Ellipse 1
         Positioned(
-          top: 75,
+          top: 100,
           left: 0,
           child: SvgPicture.asset('assets/picture/Ellipse 1.svg'),
         ),
@@ -40,24 +40,13 @@ class ProfileHeader extends StatelessWidget {
 
         /// العنوان
         Positioned(
-          top: 20,
+          top: 18,
           left: 0,
           right: 0,
           child: SafeArea(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Container(
-                //   padding: EdgeInsets.all(0),
-                //   decoration: BoxDecoration(
-                //     // color: kBackgroundColor.withAlpha(50),
-                //     color: Colors.white10,
-                //     shape: BoxShape.circle,
-                //     // borderRadius: BorderRadius.circular(16),
-                //   ),
-                //   child: Icon(Icons.person, color: Colors.white, size: 32),
-                // ),
-                // SizedBox(width: 12),
                 Text(
                   'Account',
                   style: TextStyle(
@@ -71,38 +60,14 @@ class ProfileHeader extends StatelessWidget {
           ),
         ),
 
-        /// زرار الرجوع
-        // Positioned(
-        //   top: 15,
-        //   left: 15,
-        //   child: SafeArea(
-        //     child: GestureDetector(
-        //       onTap: () => Navigator.pop(context),
-        //       child: Container(
-        //         padding: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
-        //         decoration: BoxDecoration(
-        //           // color: kBackgroundColor.withAlpha(230),
-        //           color: Colors.white10,
-        //           // shape: BoxShape.circle,
-        //           borderRadius: BorderRadius.circular(12),
-        //         ),
-        //         child: Icon(
-        //           Icons.arrow_back_ios,
-        //           color: Colors.white,
-        //           size: 20,
-        //         ),
-        //       ),
-        //     ),
-        //   ),
-        // ),
         Positioned(
-          top: 15,
-          left: 15,
+          top: 18,
+          left: 16,
           child: SafeArea(
             child: GestureDetector(
               onTap: () => Navigator.pop(context),
               child: Container(
-                padding: EdgeInsets.only(left: 6, top: 8, right: 8, bottom: 8),
+                padding: EdgeInsets.all(2),
                 decoration: BoxDecoration(
                   // color: kBackgroundColor.withAlpha(255),
                   color: Colors.white.withAlpha(240),
@@ -111,9 +76,9 @@ class ProfileHeader extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
-                  Icons.arrow_back_ios_rounded,
-                  color: const Color.fromARGB(255, 55, 203, 248),
-                  size: 16,
+                  Icons.chevron_left_rounded,
+                  color: Colors.black54,
+                  size: 26,
                 ),
               ),
             ),
@@ -121,14 +86,15 @@ class ProfileHeader extends StatelessWidget {
         ),
 
         Positioned(
-          top: 70,
+          top: 100,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
-                  radius: 53,
+                  radius: 51,
+                  backgroundColor: Colors.grey.shade200,
                   child: const CircleAvatar(
                     radius: 50,
                     backgroundImage: AssetImage('assets/icons/user2.png'),

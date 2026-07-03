@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
 
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        physics: BouncingScrollPhysics(),
+        // physics: BouncingScrollPhysics(),
         child: Column(
           // mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,

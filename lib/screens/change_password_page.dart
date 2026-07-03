@@ -37,12 +37,16 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
             child: Column(
               children: [
                 CustomHeader(
-                  height: 180,
+                  height: 230,
                   title: 'Reset Password',
-                  icon: Image.asset('assets/icons/reset_password.png' , height: 30,),
+                  icon: Image.asset(
+                    'assets/icons/reset_password.png',
+                    height: 30,
+                  ),
                   iconColor: Colors.white10,
                   iconPadding: 8,
                   backgroundColor: kThirdColor,
+                  headerHeight: 66,
                 ),
 
                 // SizedBox(height: 20),
@@ -72,7 +76,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 12),
                         StartTextFeild(
                           hintText: 'old password',
                           icon: Icons.lock,
@@ -80,7 +84,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                             oldPassword = value;
                           },
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 32),
                         Text(
                           'New Password',
                           style: TextStyle(
@@ -88,7 +92,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 12),
                         StartTextFeild(
                           hintText: 'new password',
                           icon: Icons.lock,
@@ -96,7 +100,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                             newPassword = value;
                           },
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 32),
                         Text(
                           'Confirm Password',
                           style: TextStyle(
@@ -104,7 +108,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 12),
                         StartTextFeild(
                           hintText: 'confirm password',
                           icon: Icons.lock,
@@ -114,6 +118,8 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         ),
                         SizedBox(height: 32),
                         CustomButton(
+                          verticalPadding: 10,
+                          textSize: 15,
                           color: kThirdColor,
                           onTap: () async {
                             if (formKey.currentState!.validate()) {
@@ -174,7 +180,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                                     icon: Icons.check,
                                     color: Colors.green,
                                   );
-                                }else{
+                                } else {
                                   showMessage(
                                     context,
                                     message: 'Something went wrong',

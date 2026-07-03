@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/components/horizintal_line.dart';
 import 'package:todo_app/components/profile_row.dart';
@@ -33,7 +34,7 @@ class ProfilePage extends StatelessWidget {
       //   ),
       // ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        // physics: BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
 
@@ -41,9 +42,9 @@ class ProfilePage extends StatelessWidget {
             ProfileHeader(),
 
             Transform.translate(
-              offset: Offset(0, -45),
+              offset: Offset(0, -55),
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
                 margin: EdgeInsets.symmetric(horizontal: 6),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
@@ -60,11 +61,11 @@ class ProfilePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     Text(
                       'General',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.black54,
                       ),
@@ -87,7 +88,9 @@ class ProfilePage extends StatelessWidget {
                         children: [
                           ProfileRow(
                             title: 'Calendar',
-                            icon: Icons.calendar_month_rounded,
+                            iconColor: Colors.indigoAccent,
+                            arrowColor: Colors.black54,
+                            icon: CupertinoIcons.calendar,
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -100,6 +103,8 @@ class ProfilePage extends StatelessWidget {
                           HorizintalLine(),
 
                           ProfileRow(
+                            arrowColor: Colors.black54,
+                            iconColor: kSecondaryColor,
                             title: 'Settings',
                             icon: Icons.settings,
                             onTap: () {},
@@ -108,6 +113,8 @@ class ProfilePage extends StatelessWidget {
                           HorizintalLine(),
 
                           ProfileRow(
+                            arrowColor: Colors.black54,
+                            iconColor: kStatisticsColor,
                             title: 'Statistics',
                             icon: Icons.bar_chart_rounded,
                             onTap: () {
@@ -126,7 +133,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       'Personal',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.black54,
                       ),
@@ -150,6 +157,8 @@ class ProfilePage extends StatelessWidget {
                           ProfileRow(
                             title: 'Change Password',
                             icon: Icons.lock,
+                            iconColor: kThirdColor,
+                            arrowColor: Colors.black54,
                             onTap: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
@@ -162,6 +171,8 @@ class ProfilePage extends StatelessWidget {
                           HorizintalLine(),
 
                           ProfileRow(
+                            arrowColor: Colors.redAccent,
+                            iconColor: Colors.redAccent,
                             title: 'Logout',
                             icon: Icons.logout,
                             onTap: () {
@@ -172,7 +183,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
 
-                    const SizedBox(height: 140),
+                    const SizedBox(height: 70),
                   ],
                 ),
               ),
@@ -210,7 +221,6 @@ class ProfilePage extends StatelessWidget {
               Navigator.pop(context);
 
               await FirebaseAuth.instance.signOut();
-
 
               Navigator.pushAndRemoveUntil(
                 context,

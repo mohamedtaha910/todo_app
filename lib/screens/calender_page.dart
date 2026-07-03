@@ -25,7 +25,7 @@ class _CalendarPageState extends State<CalendarPage> {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        // physics: BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

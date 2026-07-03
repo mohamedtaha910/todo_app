@@ -26,12 +26,12 @@ class _StatisticsPageState extends State<StatisticsPage> {
       backgroundColor: Colors.grey.shade100,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        physics: BouncingScrollPhysics(),
+        // physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             CustomHeader(
               title: 'Statistics',
-              height: 200,
+              height: 220,
               icon: Image.asset('assets/icons/bar_chart.png', height: 28),
               iconColor: Colors.white10,
               iconPadding: 10,
@@ -40,7 +40,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
             ),
 
             Transform.translate(
-              offset: Offset(0, -65),
+              offset: Offset(0, -70),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 12),
                 child: StreamBuilder<QuerySnapshot>(

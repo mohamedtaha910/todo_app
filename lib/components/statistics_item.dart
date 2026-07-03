@@ -23,7 +23,7 @@ class StatisticsItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal:  16 , vertical: 8),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         // height: 100,
         width: 200,
         decoration: BoxDecoration(
@@ -54,14 +54,14 @@ class StatisticsItem extends StatelessWidget {
                     ),
                     child: Icon(icon, color: iconColor, size: 28),
                   ),
-                  SizedBox(height: 8),
+                  SizedBox(height: 12),
                   Row(
                     children: [
                       Text(
-                        '$taskCount ',
+                        '$taskCount  ',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 17,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -69,7 +69,7 @@ class StatisticsItem extends StatelessWidget {
                         name,
                         style: TextStyle(
                           color: Colors.black54,
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -79,9 +79,9 @@ class StatisticsItem extends StatelessWidget {
               ),
             ),
             Icon(
-              Icons.arrow_forward_ios,
+              Icons.arrow_forward_ios_rounded,
               color: Colors.black54,
-              size: 16,
+              size: 15,
               fontWeight: FontWeight.bold,
             ),
           ],
