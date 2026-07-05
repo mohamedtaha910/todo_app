@@ -55,6 +55,7 @@ class CategoriesHeader extends StatelessWidget {
           child: SvgPicture.asset(
             'assets/picture/Ellipse 2.svg',
             colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
+            height: 140,
           ),
         ),
 
@@ -69,8 +70,12 @@ class CategoriesHeader extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: Colors.white10,
+                  color: Colors.white.withAlpha(50),
                   shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.white.withAlpha(80),
+                    width: 0.3,
+                  ),
                 ),
                 child: SvgPicture.asset(
                   category.iconPath,

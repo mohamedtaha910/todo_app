@@ -20,14 +20,11 @@ class TasksStream extends StatefulWidget {
 class _TasksStreamState extends State<TasksStream> {
   @override
   Widget build(BuildContext context) {
-    
-
     return StreamBuilder<QuerySnapshot>(
       stream: TaskServices().tasks
-          .orderBy(kTaskDate, descending: false )
+          .orderBy(kTaskDate, descending: false)
           .snapshots(),
       builder: (context, snapshot) {
-
         if (snapshot.connectionState == ConnectionState.waiting) {
           return ShimmerList();
         }
@@ -56,9 +53,8 @@ class _TasksStreamState extends State<TasksStream> {
           }
           Helper().sortByStartTime(tasksList);
 
-
           return tasksList.isEmpty
-              ? NoNotesPage(text: 'No Tasks yet !',)
+              ? NoNotesPage(text: 'you are free of tasks')
               : TasksList(tasksList: tasksList);
         } else if (snapshot.hasError) {
           return Text('Error');

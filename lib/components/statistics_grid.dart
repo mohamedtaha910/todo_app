@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/components/completed_stream.dart';
 import 'package:todo_app/components/pending_stream.dart';
@@ -31,14 +32,14 @@ class _StatisticsGridState extends State<StatisticsGrid> {
     List<Widget> statisticsList = [
       StatisticsItem(
         iconColor: Colors.blue,
-        icon: Icons.notes_rounded,
+        icon: Icons.checklist_rounded,
         taskCount: widget.totalTasks.length,
         name: 'Total',
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => TasksPage(
-                icon: Icons.notes_rounded,
+                icon: Icons.checklist_rounded,
                 name: 'Total',
                 tasksList: TotalStream(),
                 iconColor: Colors.blue,
@@ -49,14 +50,14 @@ class _StatisticsGridState extends State<StatisticsGrid> {
       ),
       StatisticsItem(
         iconColor: Colors.green,
-        icon: Icons.checklist_rounded,
+        icon: Icons.check_circle_rounded,
         taskCount: widget.completedTasks.length,
         name: 'Completed',
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => TasksPage(
-                icon: Icons.checklist_rounded,
+                icon: Icons.check_circle_rounded,
                 name: 'Completed',
                 tasksList: CompletedStream(),
                 iconColor: Colors.green,
@@ -86,14 +87,14 @@ class _StatisticsGridState extends State<StatisticsGrid> {
       ),
       StatisticsItem(
         iconColor: Colors.orange,
-        icon: Icons.calendar_month_rounded,
+        icon: CupertinoIcons.calendar_today,
         taskCount: widget.todayTasks.length,
         name: 'Today',
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => TasksPage(
-                icon: Icons.calendar_month_rounded,
+                icon: CupertinoIcons.calendar_today,
                 name: 'Today',
                 tasksList: TasksStream(date: DateTime.now()),
                 iconColor: Colors.orange,

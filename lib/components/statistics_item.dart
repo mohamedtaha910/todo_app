@@ -61,7 +61,7 @@ class StatisticsItem extends StatelessWidget {
                         '$taskCount  ',
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 16,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -69,7 +69,7 @@ class StatisticsItem extends StatelessWidget {
                         name,
                         style: TextStyle(
                           color: Colors.black54,
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

@@ -53,7 +53,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        // physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             /// ================== HEADER ==================
@@ -69,7 +69,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
 
             /// ================== CARD ==================
             Transform.translate(
-              offset: Offset(0, -79),
+              offset: Offset(0, -83),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 16),
                 padding: EdgeInsets.all(16),

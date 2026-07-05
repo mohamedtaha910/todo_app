@@ -58,7 +58,7 @@ class CustomHeader extends StatelessWidget {
         Positioned(
           top: 0,
           right: 0,
-          child: SvgPicture.asset('assets/picture/Ellipse 2.svg'),
+          child: SvgPicture.asset('assets/picture/Ellipse 2.svg', height: 150),
         ),
 
         /// العنوان

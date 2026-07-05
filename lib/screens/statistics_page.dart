@@ -120,7 +120,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                             style: TextStyle(
                               color: Colors.black54,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                           SizedBox(height: 16),
@@ -136,36 +136,50 @@ class _StatisticsPageState extends State<StatisticsPage> {
                               borderRadius: BorderRadius.all(
                                 Radius.circular(12),
                               ),
+                              border: Border.all(
+                                color: Colors.grey.withAlpha(25),
+                                width: 1,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 6,
+                                  offset: Offset(0, 2),
+                                ),
+                              ],
                             ),
                             child: Column(
                               children: [
                                 StatisticsRow(
                                   name: 'Total',
-                                  icon: Icons.notes,
+                                  icon: Icons.checklist_rounded,
                                   number: todayTasks.length.toString(),
+                                  iconColor: Colors.blue,
                                 ),
                                 HorizintalLine(),
                                 StatisticsRow(
                                   name: 'Completed',
-                                  icon: Icons.checklist_rounded,
+                                  icon: Icons.check_circle_rounded,
                                   number: todayCompleted.length.toString(),
+                                  iconColor: Colors.green,
                                 ),
                                 HorizintalLine(),
                                 StatisticsRow(
                                   name: 'Pending',
                                   icon: Icons.pending_actions_rounded,
                                   number: todayPending.length.toString(),
+                                  iconColor: Colors.pinkAccent,
                                 ),
                               ],
                             ),
                           ),
-                          SizedBox(height: 24),
+                          SizedBox(height: 28),
                           Text(
                             'Last Week ',
                             style: TextStyle(
                               color: Colors.black54,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                           SizedBox(height: 16),
@@ -181,36 +195,50 @@ class _StatisticsPageState extends State<StatisticsPage> {
                               borderRadius: BorderRadius.all(
                                 Radius.circular(12),
                               ),
+                              border: Border.all(
+                                color: Colors.black.withOpacity(0.05),
+                                width: 0.5,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 4,
+                                  offset: Offset(0, 4),
+                                ),
+                              ],
                             ),
                             child: Column(
                               children: [
                                 StatisticsRow(
                                   name: 'Total',
-                                  icon: Icons.notes,
+                                  icon: Icons.checklist_rounded,
                                   number: lastWeekTasks.length.toString(),
+                                  iconColor: Colors.blue,
                                 ),
                                 HorizintalLine(),
                                 StatisticsRow(
                                   name: 'Completed',
-                                  icon: Icons.checklist_rounded,
+                                  icon: Icons.check_circle_rounded,
                                   number: lastWeekCompleted.length.toString(),
+                                  iconColor: Colors.green,
                                 ),
                                 HorizintalLine(),
                                 StatisticsRow(
                                   name: 'Pending',
                                   icon: Icons.pending_actions_rounded,
                                   number: lastWeekPending.length.toString(),
+                                  iconColor: Colors.pinkAccent,
                                 ),
                               ],
                             ),
                           ),
-                          SizedBox(height: 24),
+                          SizedBox(height: 28),
                           Text(
                             'Last Week Progress',
                             style: TextStyle(
                               color: Colors.black54,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                           SizedBox(height: 16),
@@ -227,7 +255,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                             style: TextStyle(
                               color: Colors.black54,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
                             ),
                           ),
                           SizedBox(height: 16),

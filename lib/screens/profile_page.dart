@@ -82,6 +82,17 @@ class ProfilePage extends StatelessWidget {
                         // color: Colors.black.withAlpha(23),
                         color: kBackgroundColor,
                         borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          color: Colors.grey.withAlpha(25),
+                          width: 1,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            blurRadius: 10,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -150,6 +161,17 @@ class ProfilePage extends StatelessWidget {
                         // color: Colors.black.withAlpha(23),
                         color: kBackgroundColor,
                         borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          color: Colors.grey.withAlpha(25),
+                          width: 1,
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            blurRadius: 10,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -208,14 +230,14 @@ class ProfilePage extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             style: TextButton.styleFrom(
               backgroundColor: Colors.green.withAlpha(50),
-              foregroundColor: Colors.black,
+              foregroundColor: Colors.green,
             ),
             child: Text("Cancel"),
           ),
           TextButton(
             style: TextButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 213, 59, 47),
-              foregroundColor: Colors.white,
+              backgroundColor: Colors.red.withAlpha(50),
+              foregroundColor: Colors.red,
             ),
             onPressed: () async {
               Navigator.pop(context);

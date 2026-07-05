@@ -36,7 +36,7 @@ class _MainHeaderState extends State<MainHeader> {
               bottomRight: Radius.circular(20),
             ),
           ),
-          height: 250,
+          height: 230,
           width: double.infinity,
           // color: kSecondaryColor,
         ),
@@ -52,7 +52,7 @@ class _MainHeaderState extends State<MainHeader> {
         Positioned(
           top: 0,
           right: 0,
-          child: SvgPicture.asset('assets/picture/Ellipse 2.svg'),
+          child: SvgPicture.asset('assets/picture/Ellipse 2.svg', height: 150),
         ),
 
         /// Header Title
@@ -63,7 +63,9 @@ class _MainHeaderState extends State<MainHeader> {
 
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [SvgPicture.asset('assets/picture/Header Title.svg')],
+            children: [
+              SvgPicture.asset('assets/picture/Header Title.svg', height: 29),
+            ],
           ),
         ),
 
@@ -79,7 +81,7 @@ class _MainHeaderState extends State<MainHeader> {
               Text(
                 formattedDate,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Colors.white54,
                 ),
@@ -106,7 +108,7 @@ class _MainHeaderState extends State<MainHeader> {
               padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.black.withAlpha(100),
+                color: Colors.black.withAlpha(120),
               ),
               child: Image.asset('assets/icons/user.png', height: 26),
             ),
@@ -125,10 +127,10 @@ class _MainHeaderState extends State<MainHeader> {
               );
             },
             child: Container(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(8),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.black.withAlpha(55),
+                color: Colors.black.withAlpha(90),
               ),
               child: Image.asset('assets/icons/calendar6.png', height: 28),
             ),

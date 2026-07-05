@@ -87,15 +87,22 @@ class _TaskItemState extends State<TaskItem> {
           children: [
             Row(
               children: [
-                Text(
-                  ' ${widget.task.title.length > 30 ? '${widget.task.title.substring(0, 30)}...' : widget.task.title}',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    decoration: widget.task.isCompleted
-                        ? TextDecoration.lineThrough
-                        : null,
-                    color: widget.task.isCompleted ? Colors.grey : Colors.black,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  child: Text(
+                    widget.task.title,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      decoration: widget.task.isCompleted
+                          ? TextDecoration.lineThrough
+                          : null,
+                      color: widget.task.isCompleted
+                          ? Colors.grey
+                          : Colors.black,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 Spacer(),
@@ -128,15 +135,15 @@ class _TaskItemState extends State<TaskItem> {
             SizedBox(height: 20),
             Row(
               children: [
-                SvgPicture.asset('assets/icons/calendar.svg', height: 20),
+                SvgPicture.asset('assets/icons/calendar.svg', height: 18),
 
                 Text(
                   ' $formatedStartTime to $formatedEndTime',
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                  style: TextStyle(fontSize: 11.5, color: Colors.grey),
                 ),
                 SizedBox(width: 16),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 3),
                   decoration: BoxDecoration(
                     color: widget.task.isCompleted
                         ? Colors.grey.withAlpha(50)
@@ -152,7 +159,7 @@ class _TaskItemState extends State<TaskItem> {
                   child: Text(
                     widget.task.category,
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 11.5,
                       color: widget.task.isCompleted
                           ? Colors.grey
                           : category!.color,

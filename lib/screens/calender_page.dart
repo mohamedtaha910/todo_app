@@ -71,10 +71,11 @@ class _CalendarPageState extends State<CalendarPage> {
                       ],
                     ),
                     child: TableCalendar(
-                      rowHeight: 49,
+                      rowHeight: 42,
+                      daysOfWeekHeight: 30,
                       daysOfWeekStyle: DaysOfWeekStyle(
                         weekendStyle: TextStyle(
-                          color: Colors.black54,
+                          color: Colors.black,
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
@@ -89,7 +90,20 @@ class _CalendarPageState extends State<CalendarPage> {
                         formatButtonVisible: false,
                         titleTextStyle: TextStyle(
                           color: Colors.black,
-                          fontSize: 16,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          // fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                      calendarStyle: CalendarStyle(
+                        defaultTextStyle: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        weekendTextStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

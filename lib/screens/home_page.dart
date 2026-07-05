@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(16.0),
                       child: CategoriesGrid(ownerId: widget.user.user!.email!),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(

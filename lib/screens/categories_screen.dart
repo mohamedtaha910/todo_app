@@ -83,7 +83,7 @@ class CategoriesPage extends StatelessWidget {
                       Helper().sortByStartTime(categoryTasks);
 
                       return categoryTasks.isEmpty
-                          ? NoNotesPage(text: 'No Tasks yet !')
+                          ? NoNotesPage(text: 'No tasks Here')
                           : ListView.builder(
                               padding: EdgeInsets.zero,
                               shrinkWrap: true,

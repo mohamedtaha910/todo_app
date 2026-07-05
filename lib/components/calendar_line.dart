@@ -6,7 +6,7 @@ class CalendarLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 2,
+      height: 1.7,
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 32.0),
       decoration: BoxDecoration(

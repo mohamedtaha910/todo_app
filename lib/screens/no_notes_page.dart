@@ -19,17 +19,18 @@ class NoNotesPage extends StatelessWidget {
               padding: EdgeInsets.all(24),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: kSecondaryColor.withAlpha(50),
+                // color: kSecondaryColor.withAlpha(50),
               ),
-              child: Image.asset('assets/icons/no_tasks.png', height: 85),
+              child: Image.asset('assets/icons/error.png', height: 185),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 12),
             Text(
               text,
               style: TextStyle(
-                fontSize: 17,
+                fontSize: 15,
                 fontWeight: FontWeight.bold,
                 color: Colors.black54,
+                fontStyle: FontStyle.italic,
               ),
             ),
             SizedBox(height: 16),

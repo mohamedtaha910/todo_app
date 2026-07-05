@@ -45,7 +45,7 @@ class _EditTaskPageState extends State<EditTaskPage> {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        // physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             /// ================== HEADER ==================
@@ -56,12 +56,12 @@ class _EditTaskPageState extends State<EditTaskPage> {
               icon: Image.asset('assets/icons/edit3.png', height: 30),
               iconColor: Colors.white10,
               iconPadding: 10,
-              headerHeight: 36,
+              headerHeight: 30,
             ),
 
             /// ================== CARD ==================
             Transform.translate(
-              offset: Offset(0, -75),
+              offset: Offset(0, -83),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 16),
                 padding: EdgeInsets.all(16),
